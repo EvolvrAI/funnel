@@ -84,25 +84,15 @@ with st.form("contest_form"):
     submitted = st.form_submit_button("Menu")
     st.markdown('</div>', unsafe_allow_html=True)
 
-#Footer Delete
+#Hide Menu
 
-st.markdown("""
-    <style>
-        /* Hide 'Made with Streamlit' footer */
-        footer {visibility: hidden;}
-
-        /* Hide the hamburger (≡) menu */
-        #MainMenu {visibility: hidden;}
-
-        /* (Optional) Hide deploy button if visible */
-        header {visibility: hidden;}
-
-        /* Version-specific class (may change in new Streamlit versions) */
-        .st-emotion-cache-z5fcl4 {
-            display: none;
-        }
-    </style>
-""", unsafe_allow_html=True)
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 #Error Trial
 
