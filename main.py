@@ -2,11 +2,13 @@ import streamlit as st
 from PIL import Image
 import base64
 import threading
+import warnings
 import requests
 import time
 import urllib
 from streamlit_cookies_manager import EncryptedCookieManager
 
+warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 cookies = EncryptedCookieManager(password="EvolvrTest121212")
 redirect_url='https://google.com'
