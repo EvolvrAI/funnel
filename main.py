@@ -86,9 +86,10 @@ with st.form("contest_form"):
 
 #Error Trial
 
-if cookies.get("form_filled") == "true":
-    redirect(redirect_url)
-    st.stop()
+if cookies.ready():
+    if cookies.get("form_filled") == "true":
+        redirect(redirect_url)
+        st.stop()
 
 if submitted:
     for i in first_name:
